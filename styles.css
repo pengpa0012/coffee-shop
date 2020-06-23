@@ -1,0 +1,542 @@
+:root{
+	font-size: 18px;
+}
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Roboto', sans-serif;
+	--red-color: #d43636;
+	--red-color-hover: #a52828;
+	--grey-text: #616161;
+	overflow-x: hidden;
+}
+
+/* Global */
+
+header nav, header .wrapper, section .wrapper, footer .wrapper{
+	max-width: 1400px;
+	margin: auto;
+}
+
+section, footer{
+	padding: 7rem 30px;
+}
+
+a{
+	text-decoration: none;
+	color: #fff;
+}
+
+h1{
+	font-size: 4.5rem;
+	font-weight: 500;
+}
+
+h2{
+	font-size: 2rem;
+	font-weight: 400;
+}
+
+h3{
+	font-size: 1.5rem;
+	font-weight: 400;
+}
+
+p{
+	font-size: 1.2rem;
+	line-height: 30px;
+	font-weight: 300;
+}
+
+li{
+	list-style: none;
+	font-weight: 300;
+}
+
+button, input[type="submit"]{
+	padding: 15px 20px;
+	cursor: pointer;
+	border: none;
+	background: none;
+	outline: none;
+	color: #fff;
+	border-radius: 5px;
+	font-weight: 300;
+}
+
+.nav-burger{
+	display: none;
+}
+
+/* Header */
+
+.front{
+	background: linear-gradient(to right, rgba(0,0,0,.6), rgba(0,0,0,.4)),url('images/coffee-beans.jpg') no-repeat;
+	background-size: cover;
+	background-position: center;
+	padding-top: 0;
+	padding-bottom: 0rem;
+	color: #fff;
+}
+
+.front header{
+	padding: 1rem 30px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	transition: 500ms ease-in-out;
+}
+
+.front header.active{
+	background: #343434;
+}
+
+.front header nav{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.front header nav ul{
+	display: flex;
+	align-items: center;
+}
+
+.front header nav ul li{
+	margin: 0 20px;
+	cursor: pointer;
+}
+
+.front header nav ul button{
+	color: #fff;
+	background: var(--red-color);
+	font-size: 1rem;
+}
+
+.front header nav ul button:hover{
+	background: var(--red-color-hover);
+}
+
+.front .header-text{
+	padding: 12rem 0;
+}
+
+.front .header-text .wrapper h1{
+	margin-bottom: 20px;
+}
+
+.front .header-text .wrapper p{
+	margin-bottom: 15px;
+}
+
+.front .header-text .wrapper button{
+	color: #fff;
+	background: var(--red-color);
+	font-size: 1rem;
+}
+
+.front .header-text .wrapper button:hover{
+	background: var(--red-color-hover);
+}
+
+/* About us */
+
+.about-us .wrapper{
+	display: flex;
+	justify-content: center;
+}
+
+.about-us .wrapper .about-img{
+	width: 50%;
+}
+
+.about-us .wrapper .about-img img{
+	width: 100%;
+	max-width: 600px;
+}
+
+.about-us .wrapper .about-text{
+	width: 50%;
+}
+
+.about-us .wrapper .about-text h2{
+	margin-bottom: 20px;
+}
+
+.about-us .wrapper .about-text p{
+	color: var(--grey-text);
+}
+
+/* Types of coffee */
+
+.type-of-coffee .wrapper h2{
+	margin-bottom: 7rem;
+	text-align: center;
+}
+
+.type-of-coffee .wrapper .card-grid{
+	display: grid;
+	max-width: 1100px;
+	margin: auto;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-gap: 40px;
+}
+
+.type-of-coffee .wrapper .card{
+	box-shadow: 
+		0 5px 10px 0px rgba(0,0,0,.1),
+		0 2px 5px 0 rgba(0,0,0,.2);
+}
+
+.type-of-coffee .wrapper .card .card-img{
+	width: 100%;
+}
+
+.type-of-coffee .wrapper .card .card-img img{
+	width: 100%;
+}
+
+.type-of-coffee .wrapper .card .card-text{
+	padding: 1rem;
+}
+
+.type-of-coffee .wrapper .card .card-text h3{
+	margin-bottom: 15px;
+}
+
+.type-of-coffee .wrapper .card .card-text p{
+	line-height: 25px;
+	color: var(--grey-text);
+}
+
+/* Coffee-gallery */
+
+.coffee-gallery .wrapper h2{
+	margin-bottom: 7rem;
+	text-align: center;
+}
+
+.coffee-gallery .coffee-grid{
+	display: grid;
+	max-width: 1100px;
+	margin: auto;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-gap: 30px;
+}
+
+
+.coffee-gallery .coffee-grid .coffee:nth-child(1){
+	grid-column: 1/3;
+	grid-row: 1 / 3;
+}
+
+.coffee-gallery .coffee-grid .coffee:nth-child(4){
+	grid-column: 2/4;
+    grid-row: 3 / 5;
+}
+
+.coffee-gallery .coffee-grid .coffee:nth-child(7){
+	grid-column: 1/3;
+    grid-row: 5 /7;
+}
+
+
+.coffee-gallery .coffee-grid .coffee img{
+	width: 100%;
+	height: 100%;
+}
+
+/* Contact form*/
+
+.contact-form{
+	padding: 10rem 30px;
+}
+
+.contact-form .wrapper{
+	display: flex;
+	justify-content: space-between;
+}
+
+.contact-form .wrapper .contact{
+	width: 30%;
+}
+
+.contact-form .wrapper .contact form{
+	display: flex;
+	flex-direction: column;
+}
+
+.contact-form .wrapper .contact form input, textarea{
+	margin: 10px 0px;	
+	font-size: 1rem;
+	padding: 5px;	
+}
+
+.contact-form .wrapper .contact form textarea{
+	font-family: sans-serif;
+	resize: none;
+	height: 150px;
+}
+
+.contact-form .wrapper .contact form input[type="submit"]{
+	background: var(--red-color);
+}	
+
+.contact-form .wrapper .contact form input[type="submit"]:hover{
+	background: var(--red-color-hover);
+}
+
+.contact-form .wrapper .contact-text{
+	width: 50%;
+}
+
+/* Footer */
+
+footer{
+	background: var(--red-color);
+	color: #fff;
+	padding: 3rem 30px;
+}
+
+footer .wrapper{
+
+}
+
+footer .wrapper .upper{
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	margin-bottom: 2rem;
+}
+
+footer .wrapper .upper .links{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 50%;
+}
+
+footer .wrapper .upper .links .link h5{
+	margin-bottom: 1rem;
+}
+
+footer .wrapper .upper .links .link ul li{
+	margin: 10px 0px;
+	font-size: .9rem;
+	cursor: pointer;
+}
+
+/* Media queries*/
+
+@media (max-width: 1300px){
+
+	h1{
+		font-size: 3rem;
+	}
+
+	h2{
+		font-size: 1.5rem;
+	}
+
+	h3{
+		font-size: 1rem;
+	}
+
+	p{
+		font-size: 1rem;
+		line-height: 30px;
+	}
+
+	.front header nav ul{
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		background: #fff;
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 2rem;
+		transform: translateY(-100%);
+		transition: 200ms ease-in-out;
+		box-shadow: 
+		0 5px 10px 0px rgba(0,0,0,.1),
+		0 2px 5px 0 rgba(0,0,0,.2);
+	}
+	
+	.nav-content.active{
+		transform: translateY(0%);
+	}
+
+	.front header nav ul li{
+		color: #000;
+		padding: 40px 0 20px 0px;
+		margin: 0;	
+		display: block;	
+	}
+
+	.nav-burger{
+		display: block;
+		cursor: pointer;
+		z-index: 2;
+	}
+
+	.nav-burger .line{
+		background: #fff;
+		height: 3px;
+		width: 35px;
+		margin: 8px 0px;
+		transition: 200ms ease-in-out;
+	}
+
+	.nav-burger .line.active{
+		background: #000;
+	}
+
+	.about-us .wrapper{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.about-us .wrapper .about-img{
+		width: 80%;
+	}
+
+	.about-us .wrapper .about-img img{
+		max-width: 100%;
+	}
+
+	.about-us .wrapper .about-text{
+		width: 80%;
+		margin: 2rem 0;
+	}
+}
+
+@media (max-width: 1000px){
+
+	h1{
+		font-size: 2rem;
+	}
+
+	h2{
+		font-size: 1rem;
+	}
+
+	h3{
+		font-size: .8rem;
+	}
+
+	p{
+		font-size: .8rem !important;
+		line-height: 25px !important; 
+	}
+
+	.coffee-gallery .coffee-grid{
+		grid-template-columns: repeat(2, auto);
+	}
+
+	.coffee-gallery .coffee-grid .coffee:nth-child(1){
+		grid-column: 1/2;
+	}
+
+	.coffee-gallery .coffee-grid .coffee:nth-child(4){
+		grid-column: 1/2;
+	}
+
+	.coffee-gallery .coffee-grid .coffee:nth-child(7){
+		grid-column: 1/2;
+	}
+
+	.contact-form .wrapper{
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+
+	.contact-form .wrapper .contact{
+		width: 80%;
+	}
+
+	.contact-form .wrapper .contact-text{
+		width: 80%;
+		margin-bottom: 2rem;
+	}
+
+	footer .wrapper .upper{
+		flex-direction: column;
+	}
+
+	footer .wrapper .upper img{
+		margin-bottom: 3rem;
+	}
+
+	footer .wrapper .upper .links{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	footer .wrapper .upper .links .link{
+		margin-bottom: 5rem;
+	}
+}
+
+@media (max-width: 650px){
+
+	section, footer{
+		padding: 2rem 10px;
+	}
+
+	h1{
+		font-size: 2rem;
+	}
+
+	button{
+		font-size: .8rem !important;
+		padding: 8px 10px;
+	}
+
+	.coffee-gallery .wrapper h2{
+		margin-bottom: 2rem;
+	}
+
+	.about-us .wrapper .about-img{
+		width: 95%;
+	}
+
+	.about-us .wrapper .about-text{
+		width: 95%;
+	}
+
+	.coffee-gallery .coffee-grid{
+		grid-template-columns: repeat(1, auto);
+	}
+}
+
+@media (max-width: 450px){
+
+	h1{
+		font-size: 1.5rem;
+	}
+
+	.about-us .wrapper .about-img{
+		width: 100%;
+	}
+
+	.about-us .wrapper .about-text{
+		width: 100%;
+	}
+
+	.contact-form .wrapper .contact{
+		width: 100%;
+	}
+
+	.contact-form .wrapper .contact-text{
+		width: 100%;
+	}
+
+}
